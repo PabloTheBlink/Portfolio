@@ -1,12 +1,19 @@
 import { HOME } from "../config/constants.js?v=0.0.1";
+import { Event } from "https://cdn.devetty.es/EventJS/js";
 
 export const HomeController = {
   controller: function () {
     this.items = HOME;
     this.selected_item_index = 0;
     this.go = function (index) {
+      if (index == -1 && this.selected_item_index == 0) return;
+      if (index == 1 && this.selected_item_index == this.items.length - 1) return;
       this.selected_item_index += index;
       this.apply();
+    };
+    this.swipe_event = Event.listen("swipe", (index) => this.go(index));
+    this.onDestroy = function () {
+      Event.unlisten(this.swipe_event);
     };
   },
   render: function () {
@@ -15,7 +22,7 @@ export const HomeController = {
         ${this.items
           .map((item, index) => {
             return /* HTML */ `
-              <div1 class="item" style="left: ${64 * (index - this.selected_item_index) + 2}em;">
+              <div class="item" style="left: ${64 * (index - this.selected_item_index) + 2}em;">
                 <div class="panel" style="${this.selected_item_index != index ? "opacity: 0;" : ""}">
                   <div class="panel-header">
                     <h1>${item.title}</h1>
@@ -33,7 +40,7 @@ export const HomeController = {
                       : ``}
                   </div>
                 </div>
-              </div1>
+              </div>
             `;
           })
           .join("")}
