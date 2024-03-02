@@ -17,22 +17,22 @@ export const HeaderComponent = {
         <div class="container">
           <ul>
             <li>
-              <a href="#/" onclick="goTo('/')" class="${router.alias == "home" ? "active" : ""}">
+              <a onclick="goTo('/')" class="${router.alias == "home" ? "active" : ""}">
                 <span>Inicio</span>
               </a>
             </li>
             <li>
-              <a href="#/experience" onclick="goTo('/experience')" class="${router.alias == "experience" ? "active" : ""}">
+              <a onclick="goTo('/experience')" class="${router.alias == "experience" ? "active" : ""}">
                 <span>Experiencia</span>
               </a>
             </li>
             <li>
-              <a href="#/projects" onclick="goTo('/projects')" class="${router.alias == "projects" ? "active" : ""}">
+              <a onclick="goTo('/projects')" class="${router.alias == "projects" ? "active" : ""}">
                 <span>Proyectos</span>
               </a>
             </li>
             <li>
-              <a href="#/technologies" onclick="goTo('/technologies')" class="${router.alias == "technologies" ? "active" : ""}">
+              <a onclick="goTo('/technologies')" class="${router.alias == "technologies" ? "active" : ""}">
                 <span>Tecnologías</span>
               </a>
             </li>

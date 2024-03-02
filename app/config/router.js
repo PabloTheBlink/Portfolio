@@ -4,25 +4,30 @@ import { ExperienceController } from "../controllers/ExperienceController.js?v=0
 import { ProjectsController } from "../controllers/ProjectsController.js?v=0.0.1";
 import { TechnologiesController } from "../controllers/TechnologiesController.js?v=0.0.1";
 
-export const router = Router([
+export const router = Router(
+  [
+    {
+      path: "/",
+      controller: HomeController,
+      alias: "home",
+    },
+    {
+      path: "/experience",
+      controller: ExperienceController,
+      alias: "experience",
+    },
+    {
+      path: "/projects",
+      controller: ProjectsController,
+      alias: "projects",
+    },
+    {
+      path: "/technologies",
+      controller: TechnologiesController,
+      alias: "technologies",
+    },
+  ],
   {
-    path: "/",
-    controller: HomeController,
-    alias: "home",
-  },
-  {
-    path: "/experience",
-    controller: ExperienceController,
-    alias: "experience",
-  },
-  {
-    path: "/projects",
-    controller: ProjectsController,
-    alias: "projects",
-  },
-  {
-    path: "/technologies",
-    controller: TechnologiesController,
-    alias: "technologies",
-  },
-]);
+    useHash: false,
+  }
+);
