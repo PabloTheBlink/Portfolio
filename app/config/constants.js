@@ -2,8 +2,6 @@ export const HOME = [
   {
     title: "¿Quién soy?",
     content: /* HTML */ `
-      <h2>¡Hola! Soy Pablo, ¡Estoy aquí para innovar!</h2>
-      <p>Con 28 años de edad y 6 años de experiencia como desarrollador fullstack, mi pasión por la tecnología me impulsa a crecer en cada proyecto que emprendo.</p>
       <p>La informática es mi vida y siempre estoy sediento de conocimiento, tanto a nivel personal como profesional. Cada día es una oportunidad para aprender algo nuevo y mejorar mis habilidades.</p>
       <p>Mi trayectoria laboral ha sido un emocionante viaje de aprendizaje y desarrollo. He trabajado en una amplia gama de proyectos que abarcan desde el desarrollo front-end y back-end hasta aplicaciones móviles y soluciones multiplataforma. Mi experiencia incluye dominar tecnologías como Java, PHP, SQL y la creación de APIs. Además, he trabajado con frameworks líderes en el mercado, como SpringBoot, Laravel y Angular, entre otros.</p>
       <p>Pero más allá de mis habilidades técnicas, lo que realmente me distingue es mi capacidad para adaptarme rápidamente a nuevos entornos y desafíos. Soy un solucionador de problemas proactivo y orientado a resultados, capaz de ofrecer soluciones tangibles en cualquier situación. Soy un profesional independiente y resolutivo, pero también disfruto colaborar en equipo para alcanzar objetivos y brindar servicios de la más alta calidad.</p>
@@ -47,7 +45,6 @@ export const HOME = [
           <td>Gestión de proyectos</td>
         </tr>
       </table>
-      <p>Estas aptitudes me permiten abordar una amplia variedad de proyectos y desafíos con confianza y eficacia, y estoy comprometido con seguir desarrollándolas y ampliándolas a lo largo de mi carrera profesional.</p>
     `,
     links: [
       {
@@ -187,8 +184,6 @@ export const PROJECTS = [
     content: /* HTML */ `
       <p>ScopeJS es una librería sencilla que permite crear componentes reactivos en JavaScript vanilla. Con ScopeJS, puedes desarrollar aplicaciones web con una arquitectura basada en componentes, lo que facilita la organización y mantenimiento del código.</p>
       <p>ScopeJS ofrece una API simple para la creación de componentes reutilizables. El componente básico se define utilizando la función Component, que acepta un objeto de configuración con opciones como el nombre de la etiqueta HTML asociada al componente, un controlador para la lógica del componente y una función de renderizado.</p>
-      <p>Además de los componentes, ScopeJS proporciona funcionalidad para crear y mostrar modales en la interfaz de usuario. Los modales son útiles para mostrar contenido adicional o solicitar información al usuario de manera interactiva.</p>
-      <p>Para gestionar la navegación en una aplicación web, ScopeJS incluye un módulo de enrutamiento que permite definir rutas y controladores asociados. Con el enrutador, puedes navegar entre diferentes vistas de manera intuitiva y controlar el flujo de la aplicación de forma eficiente.</p>
       <p style="text-decoration: underline; font-weight: bold">Esta web esta realizada con esta tecnología</p>
     `,
     links: [
@@ -202,7 +197,7 @@ export const PROJECTS = [
     title: "FormJS",
     content: /* HTML */ `
       <p>FormJS es una librería ligera de JavaScript diseñada para simplificar la validación y gestión de formularios en aplicaciones web. Esta librería ofrece una API simple y eficiente que permite agregar fácilmente validaciones a los campos de formulario y validar todo el formulario con facilidad.</p>
-      <p>Con FormJS, los desarrolladores pueden mejorar la experiencia del usuario al garantizar que los datos ingresados en los formularios sean válidos antes de enviarlos al servidor. Además, FormJS facilita la obtención de los valores del formulario como un objeto JavaScript normal, lo que simplifica el procesamiento y envío de datos.</p>
+      <p>FormJS facilita la obtención de los valores del formulario como un objeto JavaScript normal, lo que simplifica el procesamiento y envío de datos.</p>
       <p>FormJS es una herramienta útil para cualquier proyecto web que requiera formularios interactivos y validaciones de datos. Su facilidad de uso y su tamaño reducido lo hacen ideal para integrarse en aplicaciones web modernas y mejorar la gestión de formularios de manera eficiente.</p>
     `,
     links: [
