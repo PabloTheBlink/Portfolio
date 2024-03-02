@@ -2,7 +2,7 @@ export const HOME = [
   {
     title: "¿Quién soy?",
     content: /* HTML */ `
-      <h2>¡Hola! Soy Pablo, ¡y estoy aquí para innovar! 🚀</h2>
+      <h2>¡Hola! Soy Pablo, ¡Estoy aquí para innovar!</h2>
       <p>Con 28 años de edad y 6 años de experiencia como desarrollador fullstack, mi pasión por la tecnología me impulsa a crecer en cada proyecto que emprendo.</p>
       <p>La informática es mi vida y siempre estoy sediento de conocimiento, tanto a nivel personal como profesional. Cada día es una oportunidad para aprender algo nuevo y mejorar mis habilidades.</p>
       <p>Mi trayectoria laboral ha sido un emocionante viaje de aprendizaje y desarrollo. He trabajado en una amplia gama de proyectos que abarcan desde el desarrollo front-end y back-end hasta aplicaciones móviles y soluciones multiplataforma. Mi experiencia incluye dominar tecnologías como Java, PHP, SQL y la creación de APIs. Además, he trabajado con frameworks líderes en el mercado, como SpringBoot, Laravel y Angular, entre otros.</p>

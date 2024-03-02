@@ -16,7 +16,7 @@ export const HomeController = {
           .map((item, index) => {
             return /* HTML */ `
               <div1 class="item" style="left: ${64 * (index - this.selected_item_index) + 2}em;">
-                <div class="panel" style="${this.selected_item_index != index ? "opacity: 0.25;" : ""}">
+                <div class="panel" style="${this.selected_item_index != index ? "opacity: 0;" : ""}">
                   <div class="panel-header">
                     <h1>${item.title}</h1>
                   </div>
