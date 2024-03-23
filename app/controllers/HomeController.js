@@ -1,4 +1,4 @@
-import { HOME } from "../config/constants.js?v=0.0.1";
+import { HOME } from "../config/constants.js?v=0.0.2";
 import { Event } from "https://cdn.devetty.es/EventJS/js";
 
 export const HomeController = {

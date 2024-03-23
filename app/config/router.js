@@ -1,8 +1,8 @@
 import { Router } from "https://cdn.devetty.es/ScopeJS/js";
-import { HomeController } from "../controllers/HomeController.js?v=0.0.1";
-import { ExperienceController } from "../controllers/ExperienceController.js?v=0.0.1";
-import { ProjectsController } from "../controllers/ProjectsController.js?v=0.0.1";
-import { TechnologiesController } from "../controllers/TechnologiesController.js?v=0.0.1";
+import { HomeController } from "../controllers/HomeController.js?v=0.0.2";
+import { ExperienceController } from "../controllers/ExperienceController.js?v=0.0.2";
+import { ProjectsController } from "../controllers/ProjectsController.js?v=0.0.2";
+import { TechnologiesController } from "../controllers/TechnologiesController.js?v=0.0.2";
 
 export const router = Router(
   [
@@ -29,5 +29,9 @@ export const router = Router(
   ],
   {
     useHash: false,
+    error: {
+      controller: HomeController,
+      alias: "home",
+    },
   }
 );
