@@ -25,24 +25,24 @@ export const HOME = [
     content: /* HTML */ `
       <table>
         <tr>
-          <td>Desarrollo fullstack</td>
-          <td>Liderazgo de equipos</td>
-          <td>Visión artificial</td>
+          <td style="width: calc(100% / 3)">Desarrollo fullstack</td>
+          <td style="width: calc(100% / 3)">Liderazgo de equipos</td>
+          <td style="width: calc(100% / 3)">Visión artificial</td>
         </tr>
         <tr>
-          <td>Desarrollo web</td>
-          <td>Front-End y Back-End</td>
-          <td>Desarrollo de aplicaciones móviles (Android e iOS)</td>
+          <td style="width: calc(100% / 3)">Desarrollo web</td>
+          <td style="width: calc(100% / 3)">Front-End y Back-End</td>
+          <td style="width: calc(100% / 3)">Desarrollo de aplicaciones móviles (Android e iOS)</td>
         </tr>
         <tr>
-          <td>Desarrollo multiplataforma</td>
-          <td>Administración de sistemas</td>
-          <td>Atención al cliente</td>
+          <td style="width: calc(100% / 3)">Desarrollo multiplataforma</td>
+          <td style="width: calc(100% / 3)">Administración de sistemas</td>
+          <td style="width: calc(100% / 3)">Atención al cliente</td>
         </tr>
         <tr>
-          <td>Trabajo bajo presión</td>
-          <td>Administración pública</td>
-          <td>Gestión de proyectos</td>
+          <td style="width: calc(100% / 3)">Trabajo bajo presión</td>
+          <td style="width: calc(100% / 3)">Administración pública</td>
+          <td style="width: calc(100% / 3)">Gestión de proyectos</td>
         </tr>
       </table>
     `,
@@ -207,6 +207,34 @@ export const PROJECTS = [
       },
     ],
   },
+  {
+    title: "Chatbot",
+    content: /* HTML */ `
+      <p>Añade un chatbot a tu web con dos líneas de código.</p>
+      <p>Con el chatbot integrado, tus usuarios podrán interactuar con tu sitio web de manera más dinámica y obtener respuestas a sus preguntas de forma instantánea.</p>
+      <p>Este chatbot utiliza ScopeJS y ChatGPT para proporcionar una experiencia de conversación natural y útil.</p>
+    `,
+    links: [
+      {
+        title: "GitHub",
+        href: "https://github.com/PabloTheBlink/ChatbotJS",
+      },
+    ],
+  },
+  {
+    title: "Planner",
+    content: /* HTML */ `
+      <p>Planner es un planificador de tareas que utiliza inteligencia artificial para ayudarte a organizar tu tiempo de manera más eficiente.</p>
+      <p>Puedes crear listas de tareas, personales o proyectos, y el sistema de inteligencia artificial te proporcionará sugerencias personalizadas sobre cómo gestionar tu tiempo de la mejor manera.</p>
+      <p>Para probar Planner y mejorar tu productividad, visita la aplicación web.</p>
+    `,
+    links: [
+      {
+        title: "Aplicación Web",
+        href: "https://planner.devetty.es",
+      },
+    ],
+  },
 ];
 
 export const TECHNOLOGIES = [
@@ -285,6 +313,14 @@ export const TECHNOLOGIES = [
     content: /* HTML */ `
       <p>Una API REST (Representational State Transfer) es una interfaz de programación de aplicaciones que utiliza los métodos HTTP estándar (GET, POST, PUT, DELETE) para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) en recursos. Las API REST se utilizan comúnmente en el desarrollo de aplicaciones web y móviles para la comunicación entre el cliente y el servidor.</p>
       <p>Las API REST se utilizan en una amplia variedad de aplicaciones, desde aplicaciones móviles y sitios web hasta servicios web y aplicaciones empresariales. Ofrecen una forma sencilla y eficiente de acceder y manipular datos a través de la web, lo que permite a los desarrolladores crear aplicaciones modernas y escalables.</p>
+    `,
+  },
+  {
+    title: "PHP Slim Framework",
+    content: /* HTML */ `
+      <p>PHP Slim Framework es un microframework PHP que te permite crear aplicaciones web rápidas y eficientes con una sintaxis simple y elegante.</p>
+      <p>Con Slim, puedes construir APIs RESTful, aplicaciones web del lado del servidor y más, sin el exceso de funcionalidad que a menudo se encuentra en otros frameworks.</p>
+      <p>Slim es ideal para proyectos pequeños y medianos donde se valora la velocidad de desarrollo y el rendimiento.</p>
     `,
   },
 ];

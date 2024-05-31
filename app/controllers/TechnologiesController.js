@@ -1,4 +1,4 @@
-import { TECHNOLOGIES } from "../config/constants.js?v=0.0.2";
+import { TECHNOLOGIES } from "../config/constants.js?v=0.0.3";
 import { Event } from "https://cdn.devetty.es/EventJS/js";
 
 export const TechnologiesController = {
@@ -12,17 +12,8 @@ export const TechnologiesController = {
       this.apply();
     };
     this.swipe_event = Event.listen("swipe", (index) => this.go(index));
-    this.interval = setInterval(() => {
-      if (this.selected_item_index == this.items.length - 1) {
-        this.selected_item_index = 0;
-      } else {
-        this.selected_item_index += 1;
-      }
-      this.apply();
-    }, 5000);
     this.onDestroy = function () {
       Event.unlisten(this.swipe_event);
-      clearInterval(this.interval);
     };
   },
   render: function () {

@@ -1,8 +1,8 @@
 import { Component } from "https://cdn.devetty.es/ScopeJS/js";
 import { Event } from "https://cdn.devetty.es/EventJS/js";
-import { AppController } from "./controllers/AppController.js?v=0.0.2";
-import { loadCSS } from "./utils/loadCSS.js?v=0.0.2";
-import { HeaderComponent } from "./components/HeaderComponent.js?v=0.0.2";
+import { AppController } from "./controllers/AppController.js?v=0.0.3";
+import { loadCSS } from "./utils/loadCSS.js?v=0.0.3";
+import { HeaderComponent } from "./components/HeaderComponent.js?v=0.0.3";
 
 Component(HeaderComponent);
 

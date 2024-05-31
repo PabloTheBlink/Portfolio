@@ -1,5 +1,5 @@
-import { router } from "../config/router.js?v=0.0.2";
-import startParticles from "../utils/startParticles.js?v=0.0.2";
+import { router } from "../config/router.js?v=0.0.3";
+import startParticles from "../utils/startParticles.js?v=0.0.3";
 
 export const AppController = {
   render: function () {

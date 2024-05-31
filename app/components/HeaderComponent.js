@@ -1,4 +1,4 @@
-import { router } from "../config/router.js?v=0.0.2";
+import { router } from "../config/router.js?v=0.0.3";
 
 export const HeaderComponent = {
   tagName: "app-header",
@@ -17,7 +17,8 @@ export const HeaderComponent = {
         <div class="container">
           <ul>
             <li>
-              <a onclick="goTo('/')" class="${router.alias == "home" ? "active" : ""}">
+              <a style="display: flex; align-items: center; gap: 1rem" onclick="goTo('/')" class="${router.alias == "home" ? "active" : ""}">
+                ${router.alias && router.alias != "home" ? /* HTML */ ` <img style="width: 2rem; height: 2rem; border-radius: 100%" src="https://pbs.twimg.com/profile_images/1740971921208995840/fq8nN2B3_400x400.jpg" id="img_profile" /> ` : ``}
                 <span>Inicio</span>
               </a>
             </li>
