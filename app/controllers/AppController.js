@@ -1,5 +1,5 @@
-import { HOME, EXPERIENCE, PROJECTS, TECHNOLOGIES } from "../config/constants.js?v=0.0.3";
-import { router } from "../setup.js?v=0.0.3";
+import { HOME, EXPERIENCE, PROJECTS, TECHNOLOGIES } from "../config/constants.js?v=0.0.4";
+import { router } from "../setup.js?v=0.0.4";
 
 export const AppController = {
   controller: function () {
