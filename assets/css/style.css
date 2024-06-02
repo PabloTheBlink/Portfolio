@@ -4,6 +4,6 @@
 }
 
 #app {
-  background-image: url("../img/background.png");
+  background-image: url("../img/background.png?v=0.0.4");
   background-size: 100%;
 }
