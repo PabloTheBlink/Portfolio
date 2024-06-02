@@ -2,8 +2,7 @@ export const HOME = [
   {
     title: "¿Quién soy?",
     content: /* HTML */ `
-      <p>La informática es mi vida y siempre estoy sediento de conocimiento, tanto a nivel personal como profesional. Cada día es una oportunidad para aprender algo nuevo y mejorar mis habilidades.</p>
-      <p>Mi trayectoria laboral ha sido un emocionante viaje de aprendizaje y desarrollo. He trabajado en una amplia gama de proyectos que abarcan desde el desarrollo front-end y back-end hasta aplicaciones móviles y soluciones multiplataforma. Mi experiencia incluye dominar tecnologías como Java, PHP, SQL y la creación de APIs. Además, he trabajado con frameworks líderes en el mercado, como SpringBoot, Laravel y Angular, entre otros.</p>
+      <p>Mi experiencia incluye dominar tecnologías como Java, PHP, SQL y la creación de APIs. Además, he trabajado con frameworks líderes en el mercado, como SpringBoot, Laravel y Angular, entre otros.</p>
       <p>Pero más allá de mis habilidades técnicas, lo que realmente me distingue es mi capacidad para adaptarme rápidamente a nuevos entornos y desafíos. Soy un solucionador de problemas proactivo y orientado a resultados, capaz de ofrecer soluciones tangibles en cualquier situación. Soy un profesional independiente y resolutivo, pero también disfruto colaborar en equipo para alcanzar objetivos y brindar servicios de la más alta calidad.</p>
     `,
   },
@@ -23,28 +22,80 @@ export const HOME = [
   {
     title: "Aptitudes",
     content: /* HTML */ `
-      <table>
-        <tr>
-          <td style="width: calc(100% / 3)">Desarrollo fullstack</td>
-          <td style="width: calc(100% / 3)">Liderazgo de equipos</td>
-          <td style="width: calc(100% / 3)">Visión artificial</td>
-        </tr>
-        <tr>
-          <td style="width: calc(100% / 3)">Desarrollo web</td>
-          <td style="width: calc(100% / 3)">Front-End y Back-End</td>
-          <td style="width: calc(100% / 3)">Desarrollo de aplicaciones móviles (Android e iOS)</td>
-        </tr>
-        <tr>
-          <td style="width: calc(100% / 3)">Desarrollo multiplataforma</td>
-          <td style="width: calc(100% / 3)">Administración de sistemas</td>
-          <td style="width: calc(100% / 3)">Atención al cliente</td>
-        </tr>
-        <tr>
-          <td style="width: calc(100% / 3)">Trabajo bajo presión</td>
-          <td style="width: calc(100% / 3)">Administración pública</td>
-          <td style="width: calc(100% / 3)">Gestión de proyectos</td>
-        </tr>
-      </table>
+      <div>
+        <div>
+          <p>Desarrollo fullstack</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 95%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Liderazgo de equipos</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 85%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Visión artificial</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 80%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Desarrollo web</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 90%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Front-End y Back-End</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 100%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Desarrollo de aplicaciones móviles (Android e iOS)</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 92%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Desarrollo multiplataforma</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 88%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Administración de sistemas</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 84%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Atención al cliente</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 89%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Trabajo bajo presión</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 93%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Administración pública</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 82%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <p>Gestión de proyectos</p>
+          <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="width: 97%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
+          </div>
+        </div>
+      </div>
     `,
     links: [
       {
@@ -57,7 +108,7 @@ export const HOME = [
 
 export const EXPERIENCE = [
   {
-    title: "6 Años de experiencia",
+    title: "+6 Años de experiencia",
     content: /* HTML */ `
       <p>Tengo una sólida experiencia de 6 años trabajando en el campo de la tecnología, lo que me ha permitido adquirir un profundo conocimiento en diversas áreas. Durante estos años, he tenido la oportunidad de enfrentarme a una amplia gama de proyectos, desde pequeñas iniciativas hasta grandes desarrollos empresariales.</p>
       <p>Mi trayectoria profesional me ha brindado la oportunidad de trabajar en equipos multidisciplinarios, lo que me ha permitido aprender y crecer constantemente. Estoy comprometido con la mejora continua y me esfuerzo por mantenerme actualizado con las últimas tendencias y tecnologías en el campo.</p>
@@ -208,6 +259,20 @@ export const PROJECTS = [
     ],
   },
   {
+    title: "StateJS",
+    content: /* HTML */ `
+      <p>StateJS es una biblioteca que proporciona una implementación sencilla para gestionar el estado en JavaScript. Esta herramienta permite crear y manipular variables de estado de forma eficiente, lo que facilita el seguimiento y actualización del estado en aplicaciones web.</p>
+      <p>La función principal de StateJS permite obtener y establecer valores de estado, así como escuchar cambios en estos valores para ejecutar funciones de devolución de llamada. Esto es útil para crear aplicaciones interactivas y reactivas, donde los cambios en el estado deben reflejarse automáticamente en la interfaz de usuario.</p>
+      <p>Además, StateJS es ligera y fácil de integrar, lo que la hace adecuada para cualquier proyecto que requiera una gestión de estado sencilla pero poderosa. Su API clara y concisa permite a los desarrolladores implementar rápidamente soluciones de estado sin sobrecargar sus aplicaciones.</p>
+    `,
+    links: [
+      {
+        title: "GitHub",
+        href: "https://github.com/PabloTheBlink/StateJS",
+      },
+    ],
+  },
+  {
     title: "Chatbot",
     content: /* HTML */ `
       <p>Añade un chatbot a tu web con dos líneas de código.</p>
@@ -321,6 +386,30 @@ export const TECHNOLOGIES = [
       <p>PHP Slim Framework es un microframework PHP que te permite crear aplicaciones web rápidas y eficientes con una sintaxis simple y elegante.</p>
       <p>Con Slim, puedes construir APIs RESTful, aplicaciones web del lado del servidor y más, sin el exceso de funcionalidad que a menudo se encuentra en otros frameworks.</p>
       <p>Slim es ideal para proyectos pequeños y medianos donde se valora la velocidad de desarrollo y el rendimiento.</p>
+    `,
+  },
+  {
+    title: "React",
+    content: /* HTML */ `
+      <p>React es una biblioteca de JavaScript desarrollada por Facebook que se utiliza para construir interfaces de usuario interactivas y dinámicas.</p>
+      <p>Con React, puedes crear componentes reutilizables que gestionan su propio estado, lo que facilita el desarrollo y mantenimiento de aplicaciones complejas.</p>
+      <p>React se ha convertido en una herramienta esencial en el desarrollo frontend moderno debido a su eficiencia, flexibilidad y fuerte comunidad de soporte.</p>
+    `,
+  },
+  {
+    title: "Next.js",
+    content: /* HTML */ `
+      <p>Next.js es un framework de React que permite la renderización del lado del servidor y la generación de sitios estáticos para aplicaciones web rápidas y optimizadas.</p>
+      <p>Con Next.js, puedes disfrutar de características como el enrutamiento basado en archivos, la carga estática de datos y la generación de páginas dinámicas, todo con una configuración mínima.</p>
+      <p>Next.js es ideal para desarrollar aplicaciones web modernas, mejorando el rendimiento y la experiencia del usuario con técnicas avanzadas de renderización.</p>
+    `,
+  },
+  {
+    title: "Astro",
+    content: /* HTML */ `
+      <p>Astro es un moderno framework para construir sitios web rápidos y ligeros, enfocado en la generación de contenido estático y la entrega eficiente.</p>
+      <p>Astro permite combinar múltiples frameworks de frontend como React, Vue, y Svelte en un solo proyecto, lo que facilita la creación de aplicaciones web híbridas.</p>
+      <p>Con Astro, puedes optimizar la entrega de contenido al navegador mediante la carga diferida de JavaScript y la generación de HTML estático en el momento de la construcción.</p>
     `,
   },
 ];
