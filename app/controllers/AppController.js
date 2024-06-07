@@ -1,5 +1,5 @@
-import { ALIGN, ITEMS } from "../config/constants.js?v=0.0.6";
-import { router } from "../setup.js?v=0.0.6";
+import { ALIGN, ITEMS } from "../config/constants.js?v=0.0.7";
+import { router } from "../setup.js?v=0.0.7";
 
 export const AppController = {
   controller: function () {
