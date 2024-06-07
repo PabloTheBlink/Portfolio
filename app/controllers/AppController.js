@@ -21,11 +21,12 @@ export const AppController = {
       </header>
       <section id="view">
         ${this.items
-          .map(({ title, content, links, align }, index) => {
+          .map(({ title, content, links, images, align }, index) => {
             const pair = index % 2 == 0;
             return /* HTML */ `
               <article class="${pair ? "background-color-white" : ""} padding-large">
-                <div class="max-width-large margin-auto display-flex ${align == ALIGN.LEFT ? "justify-content-start" : ""} ${align == ALIGN.CENTER ? "justify-content-center" : ""} ${align == ALIGN.RIGHT ? "justify-content-end" : ""}">
+                <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images ? "justify-content-end" : ""} ${!!images ? "justify-content-between" : ""}">
+                  ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
                   <div class="max-width-medium width-full">
                     <h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>
                     <div class="${pair ? "" : "color-white"}">${content}</div>
@@ -46,6 +47,7 @@ export const AppController = {
                         `
                       : ``}
                   </div>
+                  ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``}
                 </div>
               </article>
             `;

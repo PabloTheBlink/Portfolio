@@ -13,6 +13,7 @@ export const ITEMS = {
         <p>Mi experiencia incluye dominar tecnologías como Java, PHP, SQL y la creación de APIs. Además, he trabajado con frameworks líderes en el mercado, como SpringBoot, Laravel y Angular, entre otros.</p>
         <p>Pero más allá de mis habilidades técnicas, lo que realmente me distingue es mi capacidad para adaptarme rápidamente a nuevos entornos y desafíos. Soy un solucionador de problemas proactivo y orientado a resultados, capaz de ofrecer soluciones tangibles en cualquier situación. Soy un profesional independiente y resolutivo, pero también disfruto colaborar en equipo para alcanzar objetivos y brindar servicios de la más alta calidad.</p>
       `,
+      images: ["./assets/img/developer-1.png"],
     },
     {
       title: "¿Qué busco?",
@@ -27,6 +28,7 @@ export const ITEMS = {
           href: "https://www.linkedin.com/in/pablo-mart%C3%ADnez-san-jos%C3%A9-9bb24215a",
         },
       ],
+      images: ["./assets/img/developer-2.png"],
     },
     {
       title: "Aptitudes",
@@ -107,12 +109,6 @@ export const ITEMS = {
           </div>
         </div>
       `,
-      links: [
-        {
-          title: "GitHub",
-          href: "https://github.com/PabloTheBlink",
-        },
-      ],
     },
   ],
   experiencia: [
@@ -255,7 +251,7 @@ export const ITEMS = {
   proyectos: [
     {
       title: "FormJS",
-      align: ALIGN.RIGHT,
+      align: ALIGN.LEFT,
       content: /* HTML */ `
         <p>FormJS es una librería ligera de JavaScript diseñada para simplificar la validación y gestión de formularios en aplicaciones web. Esta librería ofrece una API simple y eficiente que permite agregar fácilmente validaciones a los campos de formulario y validar todo el formulario con facilidad.</p>
         <p>FormJS facilita la obtención de los valores del formulario como un objeto JavaScript normal, lo que simplifica el procesamiento y envío de datos.</p>
