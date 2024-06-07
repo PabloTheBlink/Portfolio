@@ -7,3 +7,10 @@
   background-image: url("../img/background.png?v=0.0.6");
   background-size: 100%;
 }
+
+/* Movil */
+@media (max-width: 40rem) {
+  article > div {
+    flex-direction: column;
+  }
+}
