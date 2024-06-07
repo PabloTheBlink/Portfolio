@@ -35,73 +35,73 @@ export const ITEMS = {
         <div>
           <div>
             <p>Desarrollo fullstack</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="95%">
               <div style="width: 95%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Liderazgo de equipos</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="85%">
               <div style="width: 85%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Visión artificial</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="80%">
               <div style="width: 80%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Desarrollo web</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="90%">
               <div style="width: 90%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Front-End y Back-End</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="100%">
               <div style="width: 100%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Desarrollo de aplicaciones móviles (Android e iOS)</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="92%">
               <div style="width: 92%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Desarrollo multiplataforma</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="88%">
               <div style="width: 88%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Administración de sistemas</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="84%">
               <div style="width: 84%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Atención al cliente</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="89%">
               <div style="width: 89%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Trabajo bajo presión</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="93%">
               <div style="width: 93%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Administración pública</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="82%">
               <div style="width: 82%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
           <div>
             <p>Gestión de proyectos</p>
-            <div style="background-color: #e0e0e0; border-radius: 4px;">
+            <div style="background-color: #e0e0e0; border-radius: 4px;" data-tooltip="97%">
               <div style="width: 97%; background-color: var(--primary-color); height: 24px; border-radius: 4px;"></div>
             </div>
           </div>
