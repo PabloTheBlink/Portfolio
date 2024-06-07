@@ -21,11 +21,11 @@ export const AppController = {
       </header>
       <section id="view">
         ${this.items
-          .map(({ title, content, links, images, align }, index) => {
+          .map(({ title, content, links, images, align, code }, index) => {
             const pair = index % 2 == 0;
             return /* HTML */ `
               <article class="${pair ? "background-color-white" : ""} padding-large">
-                <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images ? "justify-content-end" : ""} ${!!images ? "justify-content-between" : ""}">
+                <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images && !code ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images && !code ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images && !code ? "justify-content-end" : ""} ${!!images || !!code ? "justify-content-between" : ""}">
                   ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
                   <div class="max-width-medium width-full">
                     <h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>
@@ -48,6 +48,13 @@ export const AppController = {
                       : ``}
                   </div>
                   ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``}
+                  ${code
+                    ? /* HTML */ `
+                        <pre><code>
+                        ${code}
+                        </code></pre>
+                      `
+                    : ``}
                 </div>
               </article>
             `;

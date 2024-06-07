@@ -8,9 +8,20 @@
   background-size: 100%;
 }
 
+pre {
+  background-color: black;
+  color: white;
+  width: 50rem;
+  font-size: 0.75rem;
+  overflow: auto;
+}
+
 /* Movil */
 @media (max-width: 40rem) {
   article > div {
     flex-direction: column;
+  }
+  pre {
+    width: 20rem;
   }
 }

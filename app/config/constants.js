@@ -263,6 +263,23 @@ export const ITEMS = {
           href: "https://github.com/PabloTheBlink/FormJS",
         },
       ],
+      code: /* JAVASCRIPT */ `
+    const form = Form({
+      campo1: null,
+      campo2: null
+    });
+
+    form.campo1.setRequired(true);
+
+    if (form.validate()) {
+      // OK
+    } else {
+      // KO
+    }
+
+    const formData = form.values();
+    console.log("Valores del formulario:", formData);
+      `,
     },
     {
       title: "ScopeJS",
@@ -293,6 +310,21 @@ export const ITEMS = {
           href: "https://github.com/PabloTheBlink/StateJS",
         },
       ],
+      code: /* JAVASCRIPT */ `
+    // variable global
+    const counter = State(0);
+    setInterval(() => {
+      counter.set(counter.get() + 1)
+    }, 1000);
+    
+    // en cualquier otro controlador
+    const listener = counter.listen((old_value, new_value) => {
+      console.log({ old_value, new_value })
+    });
+    
+    // Eliminar oyente
+    counter.unlisten(listener);
+      `,
     },
     {
       title: "Planner",
