@@ -184,7 +184,7 @@
 }
 
 .min-width-large {
-  min-width: 80rem;
+  min-width: 60rem;
 }
 
 .max-width-small {
@@ -196,7 +196,7 @@
 }
 
 .max-width-large {
-  max-width: 80rem;
+  max-width: 60rem;
 }
 
 .min-height-small {
