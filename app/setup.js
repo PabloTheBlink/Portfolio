@@ -1,5 +1,5 @@
 import { Router, Component } from "https://cdn.devetty.es/ScopeJS/js";
-import { AppController } from "./controllers/AppController.js?v=0.0.5";
+import { AppController } from "./controllers/AppController.js?v=0.0.6";
 
 export const router = Router(
   [
