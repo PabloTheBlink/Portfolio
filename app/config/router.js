@@ -1,4 +1,4 @@
-import { Router } from "../../assets/js/ScopeJS.min.js";
+import { Router } from "../../assets/js/ScopeJS.min.js?v=0.0.7";
 import { HomeController } from "../controllers/HomeController.js?v=0.0.7";
 import { ExperienceController } from "../controllers/ExperienceController.js?v=0.0.7";
 import { ProjectsController } from "../controllers/ProjectsController.js?v=0.0.7";

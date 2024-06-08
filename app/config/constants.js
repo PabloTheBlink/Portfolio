@@ -484,3 +484,5 @@ export const ITEMS = {
     },
   ],
 };
+
+export const HTTPS = "https:";
