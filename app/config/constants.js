@@ -394,7 +394,6 @@ export const ITEMS = {
         <p>Acorta tus enlaces de manera rápida y cómoda con Dink.</p>
         <p>Con Dink, puedes convertir enlaces largos en URL cortas y fáciles de compartir en solo unos segundos.</p>
         <p>Este servicio utiliza tecnología avanzada para garantizar que tus enlaces sean seguros y siempre accesibles.</p>
-        <p style="text-align: center; font-weight: bold; text-decoration: underline">Prueba el servicio en esta página y comprueba su eficiencia</p>
       `,
       links: [
         {
@@ -410,7 +409,6 @@ export const ITEMS = {
         <p>Auth es una pasarela de autenticación segura y fácil de usar.</p>
         <p>Con Auth, puedes autenticar a tus usuarios llamando a <code>auth.devetty.es?redirect_url=xxxx</code>.</p>
         <p>Una vez que los usuarios inician sesión, serán redirigidos a la URL proporcionada con un token en la cabecera, asegurando una integración sin problemas con tu aplicación.</p>
-        <p style="text-align: center; font-weight: bold; text-decoration: underline">Prueba Auth en esta página y experimenta una autenticación rápida y segura</p>
       `,
       links: [
         {
