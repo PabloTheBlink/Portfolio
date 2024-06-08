@@ -16,8 +16,8 @@ pre {
   overflow: auto;
 }
 
-/* Movil */
-@media (max-width: 40rem) {
+/* Tablet */
+@media (max-width: 60rem) {
   article > div {
     flex-direction: column;
   }
