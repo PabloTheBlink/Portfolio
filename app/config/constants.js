@@ -284,10 +284,14 @@ export const ITEMS = {
     {
       title: "ScopeJS",
       align: ALIGN.CENTER,
+      images: ["./assets/img/scopejs-speed-test.webp"],
       content: /* HTML */ `
         <p>ScopeJS es una librería sencilla que permite crear componentes reactivos en JavaScript vanilla. Con ScopeJS, puedes desarrollar aplicaciones web con una arquitectura basada en componentes, lo que facilita la organización y mantenimiento del código.</p>
         <p>ScopeJS ofrece una API simple para la creación de componentes reutilizables. El componente básico se define utilizando la función Component, que acepta un objeto de configuración con opciones como el nombre de la etiqueta HTML asociada al componente, un controlador para la lógica del componente y una función de renderizado.</p>
-        <p style="text-decoration: underline; font-weight: bold">Esta web esta realizada con esta tecnología</p>
+        <br />
+        <counter></counter>
+        <p style="text-align: center; margin-top: 2rem">Ejemplo de componente sencillo en ScopeJS, con máximo rendimiento, mínimos cambios en el DOM (F12). Saca tus propias conclusiones.</p>
+        <p style="margin-top: 2rem; text-align: center; text-decoration: underline; font-weight: bold">Esta web esta realizada con esta tecnología</p>
       `,
       links: [
         {

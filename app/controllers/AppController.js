@@ -41,9 +41,10 @@ export const AppController = {
                   <div class="max-width-medium width-full">
                     <h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>
                     <div class="${pair ? "" : "color-white"}">${content}</div>
-                    <br />
+                    ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <br /><img style="width: auto; height: 20rem" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
                     ${!!links
                       ? /* HTML */ `
+                          <br />
                           <div class="display-flex ${align == ALIGN.LEFT ? "justify-content-start" : ""} ${align == ALIGN.CENTER ? "justify-content-center" : ""} ${align == ALIGN.RIGHT ? "justify-content-end" : ""}">
                             ${links
                               .map(({ title, href }) => {
