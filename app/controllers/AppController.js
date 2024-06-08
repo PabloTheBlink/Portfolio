@@ -41,7 +41,7 @@ export const AppController = {
                   <div class="max-width-medium margin-auto width-full">
                     <h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>
                     <div class="${pair ? "" : "color-white"}">${content}</div>
-                    ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <br /><img style="width: auto; height: 20rem" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
+                    ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <br /><img style="width: auto; height: 20rem; max-width: 95%; object-fit: cover" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
                     ${!!links
                       ? /* HTML */ `
                           <br />
