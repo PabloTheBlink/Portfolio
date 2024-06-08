@@ -262,6 +262,14 @@ export const ITEMS = {
           title: "GitHub",
           href: "https://github.com/PabloTheBlink/FormJS",
         },
+        {
+          title: "Devetty CDN",
+          href: "https://cdn.devetty.es/FormJS/js",
+        },
+        {
+          title: "JsDelivr CDN",
+          href: "https://cdn.jsdelivr.net/gh/pablotheblink/FormJS/js/FormJS.min.js",
+        },
       ],
       code: /* JAVASCRIPT */ `
     const form = Form({
@@ -298,6 +306,14 @@ export const ITEMS = {
           title: "GitHub",
           href: "https://github.com/PabloTheBlink/ScopeJS",
         },
+        {
+          title: "Devetty CDN",
+          href: "https://cdn.devetty.es/ScopeJS/js",
+        },
+        {
+          title: "JsDelivr CDN",
+          href: "https://cdn.jsdelivr.net/gh/pablotheblink/ScopeJS/js/StateJS.min.js",
+        },
       ],
     },
     {
@@ -312,6 +328,15 @@ export const ITEMS = {
         {
           title: "GitHub",
           href: "https://github.com/PabloTheBlink/StateJS",
+        },
+        ,
+        {
+          title: "Devetty CDN",
+          href: "https://cdn.devetty.es/StateJS/js",
+        },
+        {
+          title: "JsDelivr CDN",
+          href: "https://cdn.jsdelivr.net/gh/pablotheblink/StateJS/js/StateJS.min.js",
         },
       ],
       code: /* JAVASCRIPT */ `
@@ -333,6 +358,7 @@ export const ITEMS = {
     {
       title: "Planner",
       align: ALIGN.CENTER,
+      images: ["./assets/img/planner.webp"],
       content: /* HTML */ `
         <p>Planner es un planificador de tareas que utiliza inteligencia artificial para ayudarte a organizar tu tiempo de manera más eficiente.</p>
         <p>Puedes crear listas de tareas, personales o proyectos, y el sistema de inteligencia artificial te proporcionará sugerencias personalizadas sobre cómo gestionar tu tiempo de la mejor manera.</p>

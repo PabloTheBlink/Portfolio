@@ -45,7 +45,7 @@ export const AppController = {
                     ${!!links
                       ? /* HTML */ `
                           <br />
-                          <div class="display-flex ${align == ALIGN.LEFT ? "justify-content-start" : ""} ${align == ALIGN.CENTER ? "justify-content-center" : ""} ${align == ALIGN.RIGHT ? "justify-content-end" : ""}">
+                          <div class="display-flex gap-small ${align == ALIGN.LEFT ? "justify-content-start" : ""} ${align == ALIGN.CENTER ? "justify-content-center flex-direction-column" : ""} ${align == ALIGN.RIGHT ? "justify-content-end" : ""}">
                             ${links
                               .map(({ title, href }) => {
                                 return /* HTML */ `
