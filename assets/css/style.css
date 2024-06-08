@@ -16,6 +16,16 @@ pre {
   overflow: auto;
 }
 
+#floating-menu {
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+#floating-menu.show {
+  height: 13rem;
+}
+
 /* Tablet */
 @media (max-width: 60rem) {
   article > div {

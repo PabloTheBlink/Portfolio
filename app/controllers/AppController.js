@@ -6,19 +6,30 @@ export const AppController = {
     this.menu_items = Object.keys(ITEMS);
     if (!router.params.section) router.navigate(`/${this.menu_items[0]}`);
     this.items = ITEMS[router.params.section] || [];
+    this.show_menu = false;
     this.goTo = function (route) {
       router.navigate(route);
+    };
+    this.toggleMenu = function () {
+      this.show_menu = !this.show_menu;
+      this.apply();
     };
   },
   render: function () {
     return /* HTML */ `
       <header id="header-inner" class="padding-large color-white">
-        <div class="max-width-large margin-auto display-flex justify-content-end align-items-center">
+        <nav class="hide-tablet max-width-large margin-auto display-flex justify-content-end align-items-center">
           <ul class="display-flex gap-medium justify-content-end">
             ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${router.params.section == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
           </ul>
-        </div>
+        </nav>
+        <button onclick="toggleMenu()" class="cursor-pointer font-size-large float-right fa fa-bars show-tablet background-color-primary color-white padding-small"></button>
       </header>
+      <nav class="${this.show_menu ? "show" : ""} color-white show-tablet" id="floating-menu">
+        <ul class="display-flex gap-medium flex-direction-column align-items-center">
+          ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${router.params.section == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
+        </ul>
+      </nav>
       <section id="view">
         ${this.items
           .map(({ title, content, links, images, align, code }, index) => {
