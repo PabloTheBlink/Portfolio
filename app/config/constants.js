@@ -378,7 +378,6 @@ export const ITEMS = {
         <p>Añade un chatbot a tu web con dos líneas de código.</p>
         <p>Con el chatbot integrado, tus usuarios podrán interactuar con tu sitio web de manera más dinámica y obtener respuestas a sus preguntas de forma instantánea.</p>
         <p>Este chatbot utiliza ScopeJS y ChatGPT para proporcionar una experiencia de conversación natural y útil.</p>
-        <p style="text-align: center; font-weight: bold; text-decoration: underline">En esta misma página puedes comprobar su funcionamiento sin personalización</p>
       `,
       links: [
         {
