@@ -298,7 +298,7 @@ export const ITEMS = {
         <p>ScopeJS ofrece una API simple para la creación de componentes reutilizables. El componente básico se define utilizando la función Component, que acepta un objeto de configuración con opciones como el nombre de la etiqueta HTML asociada al componente, un controlador para la lógica del componente y una función de renderizado.</p>
         <br />
         <counter></counter>
-        <p style="text-align: center; margin-top: 2rem">Ejemplo de componente sencillo en ScopeJS, con máximo rendimiento, mínimos cambios en el DOM (F12). Saca tus propias conclusiones. <a class="color-white" style="text-decoration: underline" href="https://shorturl.at/OpXAY" target="_blank">Código aquí</a></p>
+        <p style="text-align: center; margin-top: 2rem">Ejemplo de componente sencillo en ScopeJS, con máximo rendimiento, mínimos cambios en el DOM (F12). Saca tus propias conclusiones. <a class="color-white" style="text-decoration: underline" href="https://dink.devetty.es/22b9a0d3-b3a4-408f-84c8-95b849fa7bfa" target="_blank">Código aquí</a></p>
         <p style="margin-top: 2rem; text-align: center; text-decoration: underline; font-weight: bold">Esta web esta realizada con esta tecnología</p>
       `,
       links: [
@@ -384,6 +384,38 @@ export const ITEMS = {
         {
           title: "GitHub",
           href: "https://github.com/PabloTheBlink/ChatbotJS",
+        },
+      ],
+    },
+    {
+      title: "Dink",
+      align: ALIGN.CENTER,
+      content: /* HTML */ `
+        <p>Acorta tus enlaces de manera rápida y cómoda con Dink.</p>
+        <p>Con Dink, puedes convertir enlaces largos en URL cortas y fáciles de compartir en solo unos segundos.</p>
+        <p>Este servicio utiliza tecnología avanzada para garantizar que tus enlaces sean seguros y siempre accesibles.</p>
+        <p style="text-align: center; font-weight: bold; text-decoration: underline">Prueba el servicio en esta página y comprueba su eficiencia</p>
+      `,
+      links: [
+        {
+          title: "Aplicación Web",
+          href: "https://dink.devetty.es/",
+        },
+      ],
+    },
+    {
+      title: "Auth",
+      align: ALIGN.LEFT,
+      content: /* HTML */ `
+        <p>Auth es una pasarela de autenticación segura y fácil de usar.</p>
+        <p>Con Auth, puedes autenticar a tus usuarios llamando a <code>auth.devetty.es?redirect_url=xxxx</code>.</p>
+        <p>Una vez que los usuarios inician sesión, serán redirigidos a la URL proporcionada con un token en la cabecera, asegurando una integración sin problemas con tu aplicación.</p>
+        <p style="text-align: center; font-weight: bold; text-decoration: underline">Prueba Auth en esta página y experimenta una autenticación rápida y segura</p>
+      `,
+      links: [
+        {
+          title: "Aplicación Web",
+          href: "https://auth.devetty.es",
         },
       ],
     },
