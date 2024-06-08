@@ -32,11 +32,11 @@ export const AppController = {
       </nav>
       <section id="view">
         ${this.items
-          .map(({ title, content, links, images, align, code }, index) => {
+          .map(({ title, content, links, images, align, example }, index) => {
             const pair = index % 2 == 0;
             return /* HTML */ `
               <article class="${pair ? "background-color-white" : ""} padding-large">
-                <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images && !code ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images && !code ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images && !code ? "justify-content-end" : ""} ${!!images || !!code ? "justify-content-between" : ""}">
+                <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images && !example ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images && !example ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images && !example ? "justify-content-end" : ""} ${!!images || !!example ? "justify-content-between" : ""}">
                   ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
                   <div class="max-width-medium margin-auto width-full">
                     <h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>
@@ -58,14 +58,7 @@ export const AppController = {
                         `
                       : ``}
                   </div>
-                  ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``}
-                  ${code
-                    ? /* HTML */ `
-                        <pre><code>
-                        ${code}
-                        </code></pre>
-                      `
-                    : ``}
+                  ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``} ${example ? /* HTML */ ` <iframe src="${example}"></iframe> ` : ``}
                 </div>
               </article>
             `;
