@@ -296,7 +296,7 @@ export const ITEMS = {
         },
         {
           title: "JsDelivr CDN",
-          href: "https://cdn.jsdelivr.net/gh/pablotheblink/ScopeJS/js/StateJS.min.js",
+          href: "https://cdn.jsdelivr.net/gh/pablotheblink/ScopeJS/js/ScopeJS.min.js",
         },
       ],
     },
