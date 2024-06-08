@@ -290,7 +290,7 @@ export const ITEMS = {
         <p>ScopeJS ofrece una API simple para la creación de componentes reutilizables. El componente básico se define utilizando la función Component, que acepta un objeto de configuración con opciones como el nombre de la etiqueta HTML asociada al componente, un controlador para la lógica del componente y una función de renderizado.</p>
         <br />
         <counter></counter>
-        <p style="text-align: center; margin-top: 2rem">Ejemplo de componente sencillo en ScopeJS, con máximo rendimiento, mínimos cambios en el DOM (F12). Saca tus propias conclusiones.</p>
+        <p style="text-align: center; margin-top: 2rem">Ejemplo de componente sencillo en ScopeJS, con máximo rendimiento, mínimos cambios en el DOM (F12). Saca tus propias conclusiones. <a class="color-white" style="text-decoration: underline" href="https://shorturl.at/OpXAY" target="_blank">Código aquí</a></p>
         <p style="margin-top: 2rem; text-align: center; text-decoration: underline; font-weight: bold">Esta web esta realizada con esta tecnología</p>
       `,
       links: [
