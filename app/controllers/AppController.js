@@ -38,7 +38,7 @@ export const AppController = {
               <article class="${pair ? "background-color-white" : ""} padding-large">
                 <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images && !code ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images && !code ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images && !code ? "justify-content-end" : ""} ${!!images || !!code ? "justify-content-between" : ""}">
                   ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
-                  <div class="max-width-medium width-full">
+                  <div class="max-width-medium margin-auto width-full">
                     <h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>
                     <div class="${pair ? "" : "color-white"}">${content}</div>
                     ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <br /><img style="width: auto; height: 20rem" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
