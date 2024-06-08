@@ -1,8 +1,8 @@
-import { Router } from "../../assets/js/ScopeJS.min.js?v=0.0.8";
-import { HomeController } from "../controllers/HomeController.js?v=0.0.8";
-import { ExperienceController } from "../controllers/ExperienceController.js?v=0.0.8";
-import { ProjectsController } from "../controllers/ProjectsController.js?v=0.0.8";
-import { TechnologiesController } from "../controllers/TechnologiesController.js?v=0.0.8";
+import { Router } from "../../assets/js/ScopeJS.min.js?v=0.0.9";
+import { HomeController } from "../controllers/HomeController.js?v=0.0.9";
+import { ExperienceController } from "../controllers/ExperienceController.js?v=0.0.9";
+import { ProjectsController } from "../controllers/ProjectsController.js?v=0.0.9";
+import { TechnologiesController } from "../controllers/TechnologiesController.js?v=0.0.9";
 
 export const router = Router(
   [
