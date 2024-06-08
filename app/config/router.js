@@ -1,4 +1,4 @@
-import { Router } from "../../assets/js/ScopeJS.min.js?v=0.0.8";
+import { Router } from "https://cdn.devetty.es/ScopeJS/js";
 import { HomeController } from "../controllers/HomeController.js?v=0.0.8";
 import { ExperienceController } from "../controllers/ExperienceController.js?v=0.0.8";
 import { ProjectsController } from "../controllers/ProjectsController.js?v=0.0.8";

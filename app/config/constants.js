@@ -13,7 +13,7 @@ export const ITEMS = {
         <p>Mi experiencia incluye dominar tecnologías como Java, PHP, SQL y la creación de APIs. Además, he trabajado con frameworks líderes en el mercado, como SpringBoot, Laravel y Angular, entre otros.</p>
         <p>Pero más allá de mis habilidades técnicas, lo que realmente me distingue es mi capacidad para adaptarme rápidamente a nuevos entornos y desafíos. Soy un solucionador de problemas proactivo y orientado a resultados, capaz de ofrecer soluciones tangibles en cualquier situación. Soy un profesional independiente y resolutivo, pero también disfruto colaborar en equipo para alcanzar objetivos y brindar servicios de la más alta calidad.</p>
       `,
-      images: ["./assets/img/developer-1.png"],
+      images: ["./assets/img/developer-1.webp"],
     },
     {
       title: "¿Qué busco?",
@@ -28,7 +28,7 @@ export const ITEMS = {
           href: "https://www.linkedin.com/in/pablo-mart%C3%ADnez-san-jos%C3%A9-9bb24215a",
         },
       ],
-      images: ["./assets/img/developer-2.png"],
+      images: ["./assets/img/developer-2.webp"],
     },
     {
       title: "Aptitudes",
