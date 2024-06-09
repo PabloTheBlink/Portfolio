@@ -373,8 +373,30 @@ export const ITEMS = {
       ],
     },
     {
-      title: "Auth",
+      title: "AutoClassJS",
       align: ALIGN.LEFT,
+      content: /* HTML */ ` <p>AutoClassJS es una librería que permite generar y aplicar estilos CSS dinámicos a elementos HTML utilizando atributos personalizados. Simplemente agrega el atributo auto-class a cualquier elemento HTML y define las propiedades y valores de estilo que deseas aplicar.</p>
+        <p>La librería se encargará de generar las clases CSS necesarias y aplicarlas al elemento correspondiente. También observa cambios en el DOM para procesar nuevos elementos automáticamente.</p>
+        <p>Esto facilita la creación de estilos personalizados sin necesidad de escribir CSS directamente, permitiendo un desarrollo más rápido y limpio.</p>
+        <p>AutoClassJS es ideal para proyectos que requieren una gestión flexible y dinámica de estilos, mejorando la mantenibilidad y la legibilidad del código.</p>`,
+      links: [
+        {
+          title: "GitHub",
+          href: "https://github.com/PabloTheBlink/AutoClassJS",
+        },
+        {
+          title: "Devetty CDN",
+          href: "https://cdn.devetty.es/AutoClassJS/js",
+        },
+        {
+          title: "JsDelivr CDN",
+          href: "https://cdn.jsdelivr.net/gh/PabloTheBlink/AutoClassJS/js/AutoClassJS.min.js",
+        },
+      ],
+    },
+    {
+      title: "Auth",
+      align: ALIGN.CENTER,
       content: /* HTML */ `
         <p>Auth es una pasarela de autenticación segura y fácil de usar.</p>
         <p>Con Auth, puedes autenticar a tus usuarios llamando a <code>auth.devetty.es?redirect_url=xxxx</code>.</p>
