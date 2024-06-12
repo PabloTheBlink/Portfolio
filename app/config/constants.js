@@ -409,6 +409,30 @@ export const ITEMS = {
         },
       ],
     },
+
+    {
+      title: "EventJS",
+      align: ALIGN.LEFT,
+      content: /* HTML */ `
+        <p>EventJS es una librería ligera de JavaScript diseñada para facilitar la gestión de eventos en una página web. Proporciona una forma sencilla de escuchar, emitir y dejar de escuchar eventos, simplificando la interacción entre diferentes partes de una aplicación.</p>
+        <p>Para escuchar eventos, simplemente importa EventJS y utiliza el método <code>Event.listen</code> para definir los eventos y sus correspondientes manejadores. Esto permite ejecutar funciones específicas cuando se producen ciertos eventos.</p>
+        <p>EventJS también permite emitir eventos personalizados con <code>Event.emit</code> y dejar de escuchar eventos con <code>Event.unlisten</code>. Estas funcionalidades hacen que EventJS sea una herramienta poderosa y flexible para la gestión de eventos en proyectos web.</p>
+      `,
+      links: [
+        {
+          title: "GitHub",
+          href: "https://github.com/PabloTheBlink/EventJS",
+        },
+        {
+          title: "Devetty CDN",
+          href: "https://cdn.devetty.es/EventJS/js",
+        },
+        {
+          title: "JsDelivr CDN",
+          href: "https://cdn.jsdelivr.net/gh/PabloTheBlink/EventJS/js/EventJS.min.js",
+        },
+      ],
+    },
   ],
   tecnologias: [
     {
