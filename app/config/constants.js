@@ -448,6 +448,29 @@ export const ITEMS = {
         },
       ],
     },
+    {
+      title: "HttpClientJS",
+      align: ALIGN.LEFT,
+      content: /* HTML */ `
+        <p>HttpClientJS es una pequeña y liviana librería de JavaScript diseñada para facilitar el fetching de datos en aplicaciones web. Proporciona métodos sencillos para realizar solicitudes HTTP y manejar las respuestas de forma eficiente.</p>
+        <p>Para utilizar HttpClientJS, simplemente importa la librería y llama a sus métodos. Puedes realizar solicitudes GET y POST con facilidad, y manejar los resultados a través de callbacks, permitiendo una integración rápida y sencilla con tus aplicaciones. Internamente, utiliza <code>XMLHttpRequest</code>, lo que garantiza compatibilidad con navegadores antiguos a diferencia del nuevo <code>fetch</code>.</p>
+        <p>Con HttpClientJS, los desarrolladores pueden enfocarse en la lógica de la aplicación sin preocuparse por la complejidad de las operaciones de red. Esta librería es ideal para proyectos que requieren interacciones frecuentes con APIs externas.</p>
+      `,
+      links: [
+        {
+          title: "GitHub",
+          href: "https://github.com/PabloTheBlink/HttpClientJS",
+        },
+        {
+          title: "Devetty CDN",
+          href: "https://cdn.devetty.es/HttpClientJS/js",
+        },
+        {
+          title: "JsDelivr CDN",
+          href: "https://cdn.jsdelivr.net/gh/PabloTheBlink/HttpClientJS/js/HttpClientJS.min.js",
+        },
+      ],
+    },
   ],
   tecnologias: [
     {
