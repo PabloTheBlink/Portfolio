@@ -412,7 +412,7 @@ export const ITEMS = {
 
     {
       title: "EventJS",
-      align: ALIGN.LEFT,
+      align: ALIGN.RIGHT,
       content: /* HTML */ `
         <p>EventJS es una librería ligera de JavaScript diseñada para facilitar la gestión de eventos en una página web. Proporciona una forma sencilla de escuchar, emitir y dejar de escuchar eventos, simplificando la interacción entre diferentes partes de una aplicación.</p>
         <p>Para escuchar eventos, simplemente importa EventJS y utiliza el método <code>Event.listen</code> para definir los eventos y sus correspondientes manejadores. Esto permite ejecutar funciones específicas cuando se producen ciertos eventos.</p>
@@ -430,6 +430,21 @@ export const ITEMS = {
         {
           title: "JsDelivr CDN",
           href: "https://cdn.jsdelivr.net/gh/PabloTheBlink/EventJS/js/EventJS.min.js",
+        },
+      ],
+    },
+    {
+      title: "MyGymRoutine",
+      align: ALIGN.CENTER,
+      content: /* HTML */ `
+        <p>MyGymRoutine es una aplicación web diseñada para ayudar a los usuarios a registrar y gestionar sus rutinas de ejercicio de forma sencilla y efectiva. La interfaz intuitiva permite agregar, editar y visualizar los ejercicios programados para cada día de la semana.</p>
+        <p>Con MyGymRoutine, los usuarios pueden personalizar sus rutinas diarias, asignando diferentes ejercicios y especificando detalles como series, repeticiones y tiempo de descanso. Esta herramienta facilita el seguimiento del progreso y la planificación de entrenamientos futuros.</p>
+        <p>Ideal para entusiastas del fitness y entrenadores personales, MyGymRoutine mejora la organización y el control de las rutinas de ejercicio, permitiendo una mayor eficiencia y motivación en el logro de objetivos de salud y fitness.</p>
+      `,
+      links: [
+        {
+          title: "Aplicación Web",
+          href: "https://mygymroutine.devetty.es",
         },
       ],
     },
