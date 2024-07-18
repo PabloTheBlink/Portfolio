@@ -601,17 +601,15 @@ export const ITEMS = {
   radio: [
     {},
     {
-      title: "Radio en directo",
       align: ALIGN.CENTER,
       content: /* HTML */ `
-      <audio controls autoplay style="width: 100%;">
-        <source src="https://pablomsj.com/radio.mp3" type="audio/mpeg">
-        Tu navegador no soporta la etiqueta de audio.
-      </audio>
+      <div style="margin: 1rem auto; max-width: 25rem">
+        <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8" style="display: block; width: 100%; margin: auto; aspect-ratio: 1 / 1;" />
+        <audio class="op-player op-player__media" id="audio" autoplay controls playsinline>
+          <source src="https://pablomsj.com/radio.mp3" type="audio/mpeg">
+        </audio>
+      </div>
       `,
-      images: [
-        "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8"
-      ],
       links: [
         {
           title: "Spotify",

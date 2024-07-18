@@ -14,6 +14,13 @@ export const AppController = {
       this.show_menu = !this.show_menu;
       this.apply();
     };
+
+    setTimeout(() => {
+      if (document.getElementById("audio")) {
+        var player = new OpenPlayer('audio');
+        player.init();
+      }
+    }, 100);
   },
   render: function () {
     return /* HTML */ `
