@@ -598,6 +598,28 @@ export const ITEMS = {
       `,
     },
   ],
+  radio: [
+    {},
+    {
+      title: "Radio en directo",
+      align: ALIGN.CENTER,
+      content: /* HTML */ `
+      <audio controls autoplay style="width: 100%;">
+        <source src="https://pablomsj.com/radio.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+      </audio>
+      `,
+      images: [
+        "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8"
+      ],
+      links: [
+        {
+          title: "Spotify",
+          href: "https://open.spotify.com/playlist/6vwHhbXjuUwqZZIliBJqpI",
+        }
+      ],
+    },
+  ]
 };
 
 export const HTTPS = "https:";
