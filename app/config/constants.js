@@ -601,6 +601,7 @@ export const ITEMS = {
   radio: [
     {},
     {
+      title: "Radio en directo",
       align: ALIGN.CENTER,
       content: /* HTML */ `
       <div style="margin: 1rem auto; max-width: 25rem">
