@@ -1,5 +1,5 @@
-import { ITEMS } from "../config/constants.js?v=0.0.17";
-import { router } from "../setup.js?v=0.0.17";
+import { ITEMS } from "../config/constants.js?v=0.0.18";
+import { router } from "../setup.js?v=0.0.18";
 
 export const RadioController = {
   tagName: "radio",
@@ -49,8 +49,7 @@ export const RadioController = {
     this.meta = {};
     this.toggleAudio = function () {
       this.audio.paused ? this.audio.play() : this.audio.pause();
-      // this.full_screen = !this.audio.paused;
-      // this.full_screen ? this.openFullscreen() : this.closeFullscreen();
+      if (!this.audio.paused) setTimeout(() => this.toggleFullScreen(), 2500);
       this.apply();
     };
     this.getMeta = function () {
@@ -66,11 +65,12 @@ export const RadioController = {
           this.apply();
         });
     };
-    this.interval = setInterval(this.getMeta.bind(this), 1000);
+    this.interval = setInterval(this.getMeta.bind(this), 1000 * 10);
     this.onDestroy = function () {
       if (this.interval) clearInterval(this.interval);
       this.audio.pause();
     };
+    this.getMeta();
   },
   render: function () {
     const { Lyrics, album, artist, copyright, date, description, encoded_by, filename, genre, title, track_number, track_total } = this.meta;
@@ -94,11 +94,10 @@ export const RadioController = {
         : ``}
       <section id="view">
         <div ${!this.full_screen ? `class="max-width-large margin-auto display-flex flex-direction-column justify-content-center align-items-center padding-large"` : ``} style="height: 100%">
-          ${!this.full_screen ? /* HTML */ `<h1 class="color-white" style="width: 100%; margin-bottom: -5rem">Radio en directo</h1>` : ``}
           <div style="margin: auto; width: 100%; height: ${this.full_screen ? "100%" : "30rem"}; border-radius: 0.5rem; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem; overflow: hidden">
             <div style="height: 3rem"></div>
 
-            <div style="cursor: pointer" onclick="toggleAudio">
+            <div style="cursor: pointer; z-index: 3" onclick="toggleAudio">
               ${this.audio.paused
                 ? /* HTML */ `
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff" height="100px" width="100px" version="1.1" viewBox="0 0 60 60" xml:space="preserve">
@@ -115,7 +114,7 @@ export const RadioController = {
                   `}
             </div>
 
-            <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem; height: 3rem">
+            <h1 style="color: white; margin: 0; text-align: center; font-size: 1.5rem; height: 3rem; z-index: 3">
               ${artist && title
                 ? /* HTML */ `
                     <p style="margin: 0">Now playing</p>
@@ -125,10 +124,10 @@ export const RadioController = {
                 : ``}
             </h1>
 
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8?v=1" style="${!this.audio.paused ? `animation: heartBeat 0.5s infinite;` : ``} transition: 0.25s; object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1" />
-            <div style="background-color: rgba(0, 0, 0, 0.75); width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1"></div>
+            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8?v=1" style="${!this.audio.paused ? `animation: heartBeat 0.5s infinite;` : ``} transition: 0.25s; object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1" />
+            <div style="background-color: rgba(0, 0, 0, 0.75); width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 2"></div>
 
-            <button onclick="toggleFullScreen()" style="cursor: pointer; position: absolute; bottom: 1rem; right: 1rem; background-color: transparent" class="color-white padding-small">
+            <button onclick="toggleFullScreen()" style="z-index: 3; cursor: pointer; position: absolute; bottom: 1rem; right: 1rem; background-color: transparent" class="color-white padding-small">
               <i class="fa fa-expand"></i>
             </button>
           </div>

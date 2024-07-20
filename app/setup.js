@@ -1,7 +1,7 @@
-import { Router, Component } from "../assets/js/ScopeJS.min.js?v=0.0.17";
-import { HTTPS } from "./config/constants.js?v=0.0.17";
-import { AppController } from "./controllers/AppController.js?v=0.0.17";
-import { RadioController } from "./controllers/RadioController.js?v=0.0.17";
+import { Router, Component } from "../assets/js/ScopeJS.min.js?v=0.0.18";
+import { HTTPS } from "./config/constants.js?v=0.0.18";
+import { AppController } from "./controllers/AppController.js?v=0.0.18";
+import { RadioController } from "./controllers/RadioController.js?v=0.0.18";
 
 Component({
   tagName: "counter",
