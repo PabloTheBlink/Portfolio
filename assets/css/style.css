@@ -4,7 +4,7 @@
 }
 
 #app {
-  background-image: url("../img/background.webp?v=0.0.9");
+  background-image: url("../img/background.webp?v=0.0.17");
   background-size: 100%;
 }
 
@@ -32,5 +32,17 @@ iframe {
   }
   iframe {
     width: 100%;
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
