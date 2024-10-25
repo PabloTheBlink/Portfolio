@@ -4,7 +4,6 @@ import { router } from "../setup.js?v=0.0.18";
 export const RadioController = {
   tagName: "radio",
   controller: function () {
-    this.full_screen = false;
     this.menu_items = Object.keys(ITEMS);
     this.show_menu = false;
     this.goTo = function (route) {
@@ -15,41 +14,10 @@ export const RadioController = {
       this.apply();
     };
 
-    this.openFullscreen = function () {
-      if (document.documentElement.requestFullscreen) {
-        document.documentElement.requestFullscreen();
-      } else if (document.documentElement.webkitRequestFullscreen) {
-        /* Safari */
-        document.documentElement.webkitRequestFullscreen();
-      } else if (document.documentElement.msRequestFullscreen) {
-        /* IE11 */
-        document.documentElement.msRequestFullscreen();
-      }
-    };
-
-    this.closeFullscreen = function () {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        /* Safari */
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        /* IE11 */
-        document.msExitFullscreen();
-      }
-    };
-
-    this.toggleFullScreen = function () {
-      this.full_screen = !this.full_screen;
-      //this.full_screen ? this.openFullscreen() : this.closeFullscreen();
-      this.apply();
-    };
-
     this.audio = document.querySelector("audio#radio");
     this.meta = {};
     this.toggleAudio = function () {
       this.audio.paused ? this.audio.play() : this.audio.pause();
-      if (!this.audio.paused) setTimeout(() => this.toggleFullScreen(), 2500);
       this.apply();
     };
     this.getMeta = function () {
@@ -71,30 +39,28 @@ export const RadioController = {
       this.audio.pause();
     };
     this.getMeta();
+    document.title = `Pablo Martínez San José - radio`;
   },
   render: function () {
     const { Lyrics, album, artist, copyright, date, description, encoded_by, filename, genre, title, track_number, track_total } = this.meta;
     return /* HTML */ `
-      ${!this.full_screen
-        ? /* HTML */ `
-            <header id="header-inner" class="padding-large color-white">
-              <nav class="hide-tablet max-width-large margin-auto display-flex justify-content-end align-items-center">
-                <ul class="display-flex gap-medium justify-content-end">
-                  ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${router.params.section == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
-                </ul>
-              </nav>
-              <button onclick="toggleMenu()" class="cursor-pointer font-size-large float-right fa fa-bars show-tablet background-color-primary color-white padding-small"></button>
-            </header>
-            <nav class="${this.show_menu ? "show" : ""} color-white show-tablet" id="floating-menu">
-              <ul class="display-flex gap-medium flex-direction-column align-items-center">
-                ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${router.params.section == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
-              </ul>
-            </nav>
-          `
-        : ``}
+      <header id="header-inner" class="padding-large color-white">
+        <nav class="hide-tablet max-width-large margin-auto display-flex justify-content-end align-items-center">
+          <ul class="display-flex gap-medium justify-content-end">
+            ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${"radio" == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
+          </ul>
+        </nav>
+        <button onclick="toggleMenu()" class="cursor-pointer font-size-large float-right fa fa-bars show-tablet background-color-primary color-white padding-small"></button>
+      </header>
+      <nav class="${this.show_menu ? "show" : ""} color-white show-tablet" id="floating-menu">
+        <ul class="display-flex gap-medium flex-direction-column align-items-center">
+          ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${"radio" == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
+        </ul>
+      </nav>
+
       <section id="view">
-        <div ${!this.full_screen ? `class="max-width-large margin-auto display-flex flex-direction-column justify-content-center align-items-center padding-large"` : ``} style="height: 100%">
-          <div style="margin: auto; width: 100%; height: ${this.full_screen ? "100%" : "30rem"}; border-radius: 0.5rem; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem; overflow: hidden">
+        <div class="max-width-large margin-auto display-flex flex-direction-column justify-content-center align-items-center padding-large" style="height: 100%">
+          <div style="margin: auto; width: 100%; height: 30rem; border-radius: 0.5rem; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem; overflow: hidden">
             <div style="height: 3rem"></div>
 
             <div style="cursor: pointer; z-index: 3" onclick="toggleAudio">
@@ -126,23 +92,16 @@ export const RadioController = {
 
             <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8?v=1" style="${!this.audio.paused ? `animation: heartBeat 0.5s infinite;` : ``} transition: 0.25s; object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1" />
             <div style="background-color: rgba(0, 0, 0, 0.75); width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 2"></div>
-
-            <button onclick="toggleFullScreen()" style="z-index: 3; cursor: pointer; position: absolute; bottom: 1rem; right: 1rem; background-color: transparent" class="color-white padding-small">
-              <i class="fa fa-expand"></i>
-            </button>
           </div>
         </div>
       </section>
-      ${!this.full_screen
-        ? /* HTML */ `
-            <footer id="footer-inner" class="padding-large color-white">
-              <div class="max-width-large margin-auto display-flex justify-content-between align-items-center">
-                <span>Developed with ScopeJS</span>
-                <span>By @PabloTheBlink</span>
-              </div>
-            </footer>
-          `
-        : ``}
+
+      <footer id="footer-inner" class="padding-large color-white">
+        <div class="max-width-large margin-auto display-flex justify-content-between align-items-center">
+          <span>Developed with ScopeJS</span>
+          <span>By @PabloTheBlink</span>
+        </div>
+      </footer>
     `;
   },
 };

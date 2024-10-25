@@ -14,6 +14,7 @@ export const AppController = {
       this.show_menu = !this.show_menu;
       this.apply();
     };
+    document.title = `Pablo Martínez San José - ${router.params.section}`;
   },
   render: function () {
     return /* HTML */ `
