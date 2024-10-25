@@ -287,6 +287,10 @@ export const ITEMS = {
       `,
       links: [
         {
+          title: "Documentación",
+          href: "https://scopejs.pablomsj.com",
+        },
+        {
           title: "GitHub",
           href: "https://github.com/PabloTheBlink/ScopeJS",
         },

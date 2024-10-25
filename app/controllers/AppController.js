@@ -35,18 +35,18 @@ export const AppController = {
           .map(({ title, content, links, images, align, example }, index) => {
             const pair = index % 2 == 0;
             return /* HTML */ `
-              <article fadeIn="0" class="${pair ? "background-color-white" : ""} ${title && content ? "padding-large" : ""}">
+              <article class="${pair ? "background-color-white" : ""} ${title && content ? "padding-large" : ""}">
                 <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images && !example ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images && !example ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images && !example ? "justify-content-end" : ""} ${!!images || !!example ? "justify-content-between" : ""}">
-                  ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img lazy fadeIn="0" style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
+                  ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img lazy style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
                   <div class="max-width-medium margin-auto width-full">
-                    ${title ? /* HTML */ `<h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>` : ``} ${content ? /* HTML */ `<div class="${pair ? "" : "color-white"}">${content}</div>` : ``} ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <img lazy fadeIn="0" style="margin-top: 1rem; width: auto; height: 20rem; max-width: 95%; object-fit: cover" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
+                    ${title ? /* HTML */ `<h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>` : ``} ${content ? /* HTML */ `<div class="${pair ? "" : "color-white"}">${content}</div>` : ``} ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <img lazy style="margin-top: 1rem; width: auto; height: 20rem; max-width: 95%; object-fit: cover" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
                     ${!!links
                       ? /* HTML */ `
                           <div style="margin-top: 1rem" class="display-flex gap-small ${align == ALIGN.LEFT ? "justify-content-start" : ""} ${align == ALIGN.CENTER ? "justify-content-center flex-direction-column" : ""} ${align == ALIGN.RIGHT ? "justify-content-end" : ""}">
                             ${links
                               .map(({ title, href }) => {
                                 return /* HTML */ `
-                                  <a fadeIn="0" href="${href}" target="_blank" class="display-inline-block ${align == ALIGN.CENTER ? "min-width-small display-flex justify-content-center background-color-white" : "background-color-primary color-white"} padding-small">
+                                  <a href="${href}" target="_blank" class="display-inline-block ${align == ALIGN.CENTER ? "min-width-small display-flex justify-content-center background-color-white" : "background-color-primary color-white"} padding-small">
                                     <span>${title}</span>
                                   </a>
                                 `;
@@ -56,7 +56,7 @@ export const AppController = {
                         `
                       : ``}
                   </div>
-                  ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img lazy fadeIn="0" style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``} ${example ? /* HTML */ ` <iframe fadeIn="0" src="${example}"></iframe> ` : ``}
+                  ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img lazy style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``} ${example ? /* HTML */ ` <iframe src="${example}"></iframe> ` : ``}
                 </div>
               </article>
             `;
