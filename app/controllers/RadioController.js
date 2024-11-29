@@ -1,11 +1,45 @@
 import { ITEMS } from "../config/constants.js?v=0.0.19";
 import { router } from "../setup.js?v=0.0.19";
 
+function obtenerCaratulaDeezer(titulo, artista) {
+  const proxy = "https://cors.devetty.es/?url=";
+  const urlBusqueda = `${proxy}${encodeURIComponent(`https://api.deezer.com/search?q=${encodeURIComponent(`${titulo} ${artista}`)}`)}`;
+
+  return fetch(urlBusqueda)
+    .then((respuestaBusqueda) => respuestaBusqueda.json())
+    .then((datosBusqueda) => {
+      if (!datosBusqueda.data || datosBusqueda.data.length === 0) {
+        throw new Error("Canción no encontrada.");
+      }
+
+      // Obtener el ID de la primera coincidencia
+      const trackId = datosBusqueda.data[0].id;
+      const urlTrack = `${proxy}https://api.deezer.com/track/${trackId}`;
+
+      return fetch(urlTrack);
+    })
+    .then((respuestaTrack) => respuestaTrack.json())
+    .then((detallesTrack) => {
+      if (!detallesTrack.album || !detallesTrack.album.cover_big) {
+        throw new Error("No se encontró la carátula.");
+      }
+
+      // Devolver la URL de la carátula
+      return detallesTrack.album.cover_big;
+    })
+    .catch((error) => Promise.reject(error.message));
+}
+
+const IMAGE = "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8?v=1";
+
 export const RadioController = {
   tagName: "radio",
   controller: function () {
     this.menu_items = Object.keys(ITEMS);
     this.show_menu = false;
+
+    this.image = IMAGE;
+
     this.goTo = function (route) {
       router.navigate(route);
     };
@@ -25,6 +59,16 @@ export const RadioController = {
         .then((r) => r.json())
         .then((r) => {
           this.meta = r.data.information.category.meta;
+
+          obtenerCaratulaDeezer(this.meta.album, this.meta.artist)
+            .then((caratula) => {
+              this.image = caratula;
+              this.apply();
+            })
+            .catch((error) => {
+              this.image = IMAGE;
+              this.apply();
+            });
           if (this.audio.src == "") {
             this.audio.src = "https://pablomsj.com/radio.mp3";
             this.toggleAudio();
@@ -40,6 +84,9 @@ export const RadioController = {
     };
     this.getMeta();
     document.title = `Pablo Martínez San José - radio`;
+  },
+  postRender: function () {
+    document.querySelector("#app").classList.add("overlay");
   },
   render: function () {
     const { Lyrics, album, artist, copyright, date, description, encoded_by, filename, genre, title, track_number, track_total } = this.meta;
@@ -60,7 +107,7 @@ export const RadioController = {
 
       <section id="view">
         <div class="max-width-large margin-auto display-flex flex-direction-column justify-content-center align-items-center padding-large" style="height: 100%">
-          <div style="margin: auto; width: 100%; height: 30rem; border-radius: 0.5rem; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem; overflow: hidden">
+          <div style="box-shadow: 0 0 2.5rem 0rem white; margin: auto; width: 100%; height: 30rem; border-radius: 0.5rem; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1.5rem; overflow: hidden">
             <div style="height: 3rem"></div>
 
             <div style="cursor: pointer; z-index: 3" onclick="toggleAudio">
@@ -90,7 +137,7 @@ export const RadioController = {
                 : ``}
             </h1>
 
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8475060ea6c558a3f5ba9190d8?v=1" style="${!this.audio.paused ? `animation: heartBeat 0.5s infinite;` : ``} transition: 0.25s; object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1" />
+            <img src="${this.image}" style="${!this.audio.paused ? `animation: heartBeat 0.5s infinite;` : ``} transition: 0.25s; object-fit: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1" />
             <div style="background-color: rgba(0, 0, 0, 0.75); width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 2"></div>
           </div>
         </div>

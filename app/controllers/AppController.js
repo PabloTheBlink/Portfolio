@@ -16,6 +16,9 @@ export const AppController = {
     };
     document.title = `Pablo Martínez San José - ${router.params.section}`;
   },
+  postRender: function () {
+    document.querySelector("#app").classList.remove("overlay");
+  },
   render: function () {
     return /* HTML */ `
       <header id="header-inner" class="padding-large color-white">

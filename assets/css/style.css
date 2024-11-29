@@ -8,6 +8,12 @@
   background-size: 100%;
 }
 
+#app.overlay {
+  background: url(../img/background.webp?v=0.0.19), rgba(0, 0, 0, 0.75);
+  background-size: 100%;
+  background-blend-mode: overlay;
+}
+
 iframe {
   width: 50rem;
   overflow: auto;
