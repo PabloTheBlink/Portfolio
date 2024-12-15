@@ -607,7 +607,7 @@ export const ITEMS = {
     {
       align: ALIGN.RIGHT,
       title: "Radio en directo",
-      content: /* HTML */ ` <iframe style="width: 100%; height: 30rem; border-radius: 2rem" src="https://radio.pablomsj.com"></iframe> `,
+      content: /* HTML */ ` <iframe style="box-shadow: 0 0 2.5rem 0rem white; width: 100%; height: 30rem; border-radius: 2rem" src="https://radio.pablomsj.com"></iframe> `,
       links: [
         {
           title: "Spotify",
