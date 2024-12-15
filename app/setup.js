@@ -1,7 +1,6 @@
 import { Router, Component } from "../assets/js/ScopeJS.min.js?v=0.0.19";
 import { HTTPS } from "./config/constants.js?v=0.0.19";
 import { AppController } from "./controllers/AppController.js?v=0.0.19";
-import { RadioController } from "./controllers/RadioController.js?v=0.0.19";
 
 Component({
   tagName: "counter",
@@ -33,11 +32,6 @@ export const router = Router(
       path: "/:section",
       controller: AppController,
       alias: "section",
-    },
-    {
-      path: "/radio",
-      controller: RadioController,
-      alias: "radio",
     },
   ],
   {

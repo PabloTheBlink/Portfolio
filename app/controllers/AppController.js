@@ -17,7 +17,11 @@ export const AppController = {
     document.title = `Pablo Martínez San José - ${router.params.section}`;
   },
   postRender: function () {
-    document.querySelector("#app").classList.remove("overlay");
+    if (router.params.section == "radio") {
+      document.querySelector("#app").classList.add("overlay");
+    } else {
+      document.querySelector("#app").classList.remove("overlay");
+    }
   },
   render: function () {
     return /* HTML */ `

@@ -602,7 +602,20 @@ export const ITEMS = {
       `,
     },
   ],
-  radio: [],
+  radio: [
+    {},
+    {
+      align: ALIGN.RIGHT,
+      title: "Radio en directo",
+      content: /* HTML */ ` <iframe style="width: 100%; height: 30rem; border-radius: 2rem" src="https://radio.pablomsj.com"></iframe> `,
+      links: [
+        {
+          title: "Spotify",
+          href: "https://open.spotify.com/playlist/6vwHhbXjuUwqZZIliBJqpI",
+        },
+      ],
+    },
+  ],
 };
 
 export const HTTPS = "https:";
