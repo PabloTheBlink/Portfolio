@@ -4,6 +4,8 @@ export const ALIGN = {
   RIGHT: 3,
 };
 
+export const SECURITY_API_KEY = "1538c81b8af37086b18bad992aaeded7";
+
 export const ITEMS = {
   inicio: [
     {
