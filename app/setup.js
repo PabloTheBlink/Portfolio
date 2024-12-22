@@ -1,41 +1,9 @@
 import { Router, Component } from "../assets/js/ScopeJS.min.js?v=0.0.19";
-import { SecurityManagerService } from "../assets/js/SecurityManagerService.js?v=0.0.19";
+import { checkSecurity } from "../assets/js/SecurityManagerService.js?v=0.0.19";
 import { HTTPS, SECURITY_API_KEY } from "./config/constants.js?v=0.0.19";
 import { AppController } from "./controllers/AppController.js?v=0.0.19";
 
-async function getPublicIP() {
-  try {
-    const response = await fetch("https://icanhazip.com/");
-    const ip = await response.text();
-    return ip.trim();
-  } catch (error) {
-    console.error("Error fetching IP:", error);
-  }
-}
-
-if (navigator.userAgent !== "SecurityManager") {
-  const service = new SecurityManagerService("https://security.devetty.es/api", SECURITY_API_KEY);
-
-  const ipAddress = await getPublicIP(); // Placeholder, replace with actual logic to get client IP
-  const urlToCheck = window.location.pathname + window.location.search;
-  const origin = document.referrer || "";
-  const method = "GET"; // Replace with actual HTTP method
-  const body = {
-    GET: new URLSearchParams(window.location.search).toString(),
-    POST: {}, // You may need to collect POST data dynamically
-    body: null, // Replace with actual request body if needed
-  };
-
-  (async () => {
-    const ok = await service.check(ipAddress, urlToCheck, origin, method, body);
-
-    if (!ok) {
-      document.body.innerHTML = "Access Forbidden";
-      document.body.style.color = "red";
-      throw new Error("403 Forbidden");
-    }
-  })();
-}
+checkSecurity();
 
 Component({
   tagName: "counter",
@@ -77,5 +45,7 @@ export const router = Router(
     },
   }
 );
+
+router.listen(() => checkSecurity());
 
 router.render(document.querySelector("#content"));

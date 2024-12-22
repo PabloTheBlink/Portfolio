@@ -1,3 +1,5 @@
+import { getPublicIP } from "./getPublicIP.js";
+
 export class SecurityManagerService {
   constructor(url, apiKey) {
     this.url = url;
@@ -56,5 +58,31 @@ export class SecurityManagerService {
       body,
       extra,
     });
+  }
+}
+
+export async function checkSecurity() {
+  if (navigator.userAgent !== "SecurityManager") {
+    const service = new SecurityManagerService("https://security.devetty.es/api", SECURITY_API_KEY);
+
+    const ipAddress = await getPublicIP(); // Placeholder, replace with actual logic to get client IP
+    const urlToCheck = window.location.pathname + window.location.search;
+    const origin = document.referrer || "";
+    const method = "GET"; // Replace with actual HTTP method
+    const body = {
+      GET: new URLSearchParams(window.location.search).toString(),
+      POST: {}, // You may need to collect POST data dynamically
+      body: null, // Replace with actual request body if needed
+    };
+
+    (async () => {
+      const ok = await service.check(ipAddress, urlToCheck, origin, method, body);
+
+      if (!ok) {
+        document.body.innerHTML = "Access Forbidden";
+        document.body.style.color = "red";
+        throw new Error("403 Forbidden");
+      }
+    })();
   }
 }
