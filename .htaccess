@@ -2,10 +2,6 @@
   Header set Cache-Control "max-age=86400, public"
 </Files>
 
-<Files "index.html">
-  Header set Cache-Control "max-age=86400, public"
-</Files>
-
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
