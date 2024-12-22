@@ -1,3 +1,4 @@
+import { SECURITY_API_KEY } from "../../app/config/constants.js";
 import { getPublicIP } from "./getPublicIP.js";
 
 export class SecurityManagerService {
