@@ -19,7 +19,7 @@
 
 <IfModule mod_headers.c>
     # Recursos estáticos con caché de 1 año
-    <FilesMatch "\.(jpg|jpeg|png|gif|webp|css|js)$">
+    <FilesMatch "^assets/(img/.*\.(jpg|jpeg|png|gif|webp|css|js))$">
         Header set Cache-Control "max-age=31536000, public, immutable"
         Header unset ETag
     </FilesMatch>
@@ -32,6 +32,13 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+
+    # Excluir archivos y directorios existentes de la reescritura
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Redirigir todo lo demás a index.html
     RewriteRule ^index\.html$ - [L]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
