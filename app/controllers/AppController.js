@@ -31,7 +31,7 @@ export const AppController = {
             ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${router.params.section == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
           </ul>
         </nav>
-        <button onclick="toggleMenu()" class="cursor-pointer font-size-large float-right show-tablet background-color-primary color-white padding-small">
+        <button aria-label="Abrir menú" onclick="toggleMenu()" class="cursor-pointer font-size-large float-right show-tablet background-color-primary color-white padding-small">
           <svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="width: 24px; height: 24px;" xml:space="preserve">
             <g>
               <rect y="5" width="50" height="5" />
@@ -53,9 +53,9 @@ export const AppController = {
             return /* HTML */ `
               <article class="${pair ? "background-color-white" : ""} ${title && content ? "padding-large" : ""}">
                 <div class="max-width-large margin-auto display-flex align-items-center gap-large ${align == ALIGN.LEFT && !images && !example ? "justify-content-start" : ""} ${align == ALIGN.CENTER && !images && !example ? "justify-content-center" : ""} ${align == ALIGN.RIGHT && !images && !example ? "justify-content-end" : ""} ${!!images || !!example ? "justify-content-between" : ""}">
-                  ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img lazy style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
+                  ${align == ALIGN.RIGHT && !!images ? /* HTML */ ` <img alt="Imágen izquierda" lazy style="width: 20rem; height: auto" src="${images[0]}" /> ` : ``}
                   <div class="max-width-medium margin-auto width-full">
-                    ${title ? /* HTML */ `<h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>` : ``} ${content ? /* HTML */ `<div class="${pair ? "" : "color-white"}">${content}</div>` : ``} ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <img lazy style="margin-top: 1rem; width: auto; height: 20rem; max-width: 95%; object-fit: cover" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
+                    ${title ? /* HTML */ `<h1 class="${pair ? "color-primary" : "color-white"}">${title}</h1>` : ``} ${content ? /* HTML */ `<div class="${pair ? "" : "color-white"}">${content}</div>` : ``} ${align == ALIGN.CENTER && !!images ? /* HTML */ ` <img alt="Imágen central" lazy style="margin-top: 1rem; width: auto; height: 20rem; max-width: 95%; object-fit: cover" src="${images[0]}" class="margin-auto display-block" /> ` : ``}
                     ${!!links
                       ? /* HTML */ `
                           <div style="margin-top: 1rem" class="display-flex gap-small ${align == ALIGN.LEFT ? "justify-content-start" : ""} ${align == ALIGN.CENTER ? "justify-content-center flex-direction-column" : ""} ${align == ALIGN.RIGHT ? "justify-content-end" : ""}">
@@ -72,7 +72,7 @@ export const AppController = {
                         `
                       : ``}
                   </div>
-                  ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img lazy style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``} ${example ? /* HTML */ ` <iframe src="${example}"></iframe> ` : ``}
+                  ${align == ALIGN.LEFT && !!images ? /* HTML */ ` <img alt="Imágen derecha" lazy style="width: auto; height: 20rem" src="${images[0]}" /> ` : ``} ${example ? /* HTML */ ` <iframe src="${example}"></iframe> ` : ``}
                 </div>
               </article>
             `;
