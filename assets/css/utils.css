@@ -50,52 +50,20 @@
   }
 }
 
-.font-size-small {
-  font-size: 0.75rem;
-}
-
-.font-size-medium {
-  font-size: 1rem;
-}
-
 .font-size-large {
   font-size: 1.25rem;
 }
 
-.font-size-xlarge {
-  font-size: 1.5rem;
-}
-
-.font-size-xxlarge {
-  font-size: 2rem;
-}
-
-.display-inline {
-  display: inline;
-}
-
-.display-block {
-  display: block;
-}
-
-.display-grid {
-  display: grid;
+.display-inline-block {
+  display: inline-block;
 }
 
 .display-flex {
   display: flex;
 }
 
-.flex-direction-row {
-  flex-direction: row;
-}
-
 .flex-direction-column {
   flex-direction: column;
-}
-
-.flex-1 {
-  flex: 1;
 }
 
 .justify-content-between {
@@ -116,34 +84,6 @@
 
 .align-items-center {
   align-items: center;
-}
-
-.align-items-start {
-  align-items: flex-start;
-}
-
-.align-items-end {
-  align-items: flex-end;
-}
-
-.align-self-center {
-  align-self: center;
-}
-
-.align-self-start {
-  align-self: flex-start;
-}
-
-.align-self-end {
-  align-self: flex-end;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
 }
 
 .gap-small {
@@ -246,29 +186,7 @@
   max-width: 60rem;
 }
 
-.min-height-small {
-  min-height: 10rem;
-}
 
-.min-height-medium {
-  min-height: 20rem;
-}
-
-.min-height-large {
-  min-height: 30rem;
-}
-
-.max-height-small {
-  max-height: 10rem;
-}
-
-.max-height-medium {
-  max-height: 20rem;
-}
-
-.max-height-large {
-  max-height: 30rem;
-}
 
 .float-right {
   float: right;

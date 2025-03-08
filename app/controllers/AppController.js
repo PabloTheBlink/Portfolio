@@ -31,7 +31,15 @@ export const AppController = {
             ${this.menu_items.map((item) => /* HTML */ ` <li style="text-transform: capitalize" onclick="goTo('/${item}')" class="${router.params.section == item ? "text-decoration-underline" : ""} cursor-pointer">${item}</li> `).join("")}
           </ul>
         </nav>
-        <button onclick="toggleMenu()" class="cursor-pointer font-size-large float-right fa fa-bars show-tablet background-color-primary color-white padding-small"></button>
+        <button onclick="toggleMenu()" class="cursor-pointer font-size-large float-right show-tablet background-color-primary color-white padding-small">
+          <svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="width: 24px; height: 24px;" xml:space="preserve">
+            <g>
+              <rect y="5" width="50" height="5" />
+              <rect y="25" width="50" height="5" />
+              <rect y="45" width="50" height="5" />
+            </g>
+          </svg>
+        </button>
       </header>
       <nav class="${this.show_menu ? "show" : ""} color-white show-tablet" id="floating-menu">
         <ul class="display-flex gap-medium flex-direction-column align-items-center">
