@@ -603,6 +603,14 @@ export const ITEMS = {
         <p>Con Astro, puedes optimizar la entrega de contenido al navegador mediante la carga diferida de JavaScript y la generación de HTML estático en el momento de la construcción.</p>
       `,
     },
+    {
+      align: ALIGN.RIGHT,
+      title: "MCP (Model Context Protocol)",
+      content: /* HTML */ `
+        <p>MCP (Model Context Protocol) es un protocolo diseñado para facilitar la comunicación y la gestión de contextos en modelos de datos complejos, especialmente en aplicaciones de inteligencia artificial y aprendizaje automático.</p>
+        <p>Permite una interacción eficiente entre diferentes componentes de un sistema, asegurando que los datos y los modelos se mantengan sincronizados y contextualizados. MCP es ideal para proyectos que requieren una integración avanzada de modelos de IA con sistemas distribuidos.</p>
+      `,
+    },
   ],
   radio: [
     {},
